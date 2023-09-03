@@ -2,25 +2,39 @@ import { StyleSheet } from "react-native";
 
 
 const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'center',
+    searchContainer: {
+    flexDirection: 'row',
     alignItems: 'center',
-    flex: 1,
-    padding: 16,
-    flexDirection: 'column',
-    width: "100%",
-    height: "100%",
-    textAlignVertical: 'center',
+    backgroundColor: 'white',
+    borderWidth: 1,
+    borderRadius: 5,
+    paddingHorizontal: 10,
+    marginVertical: 10,
+    marginHorizontal: 10,
   },
-  welcomeMessage: {
-    marginTop: 100,
+  input: {
+    flex: 1,
+    height: 40,
+    marginRight: 10,
+  },
+  searchBtn: {
+    backgroundColor: "#FFD210",
+    borderRadius: 16,
+
+  },
+  nextBtn: {
     fontWeight:'bold', 
     alignSelf: 'center', 
     textAlign: 'center', 
-    fontSize: 28,
-    bottom: -12,
+    fontSize: 18, 
+    backgroundColor: "#FFD210", 
+    borderWidth: 2,
+    borderColor: "#312651", 
+    width:150, 
+    height:28, 
+    borderRadius: 15, 
+    overflow: 'hidden',
   },
-
 });
 
 export default styles;

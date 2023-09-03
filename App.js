@@ -22,6 +22,11 @@ function App() {
           name="Apartments"
           component={Apartments}
         />
+
+        <Stack.Screen
+          name="Map"
+          component={Map}
+        />    
       </Stack.Navigator>
       </NavigationContainer>
   );
