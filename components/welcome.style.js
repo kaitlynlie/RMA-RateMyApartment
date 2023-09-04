@@ -30,10 +30,10 @@ const styles = StyleSheet.create({
     width: 150,
     height: 150,
     alignSelf: 'center',
-    top: 100,
+    top: 200,
   },
   welcomeMessage: {
-    marginTop: 100,
+    marginTop: 200,
     fontWeight:'bold', 
     alignSelf: 'center', 
     textAlign: 'center', 

@@ -1,8 +1,5 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-// import { RAPID_API_KEY } from '@env'
-
-// const rapidApiKey = RAPID_API_KEY;
 
 const useFetch = (endpoint) => {
   const [data, setData] = useState([]);
@@ -11,28 +8,50 @@ const useFetch = (endpoint) => {
 
   const options = {
     method: 'POST',
-    url: 'https://apartments-com.p.rapidapi.com/typeahead',
+    url: 'https://apartments-com.p.rapidapi.com/search',
     headers: {
       'content-type': 'application/json',
       'X-RapidAPI-Key': '99d7c2a71emsh6a9112fb9a5acfcp196b99jsnc68d24f561ba',
-      'X-RapidAPI-Host': 'apartments-com.p.rapidapi.com',
+      'X-RapidAPI-Host': 'apartments-com.p.rapidapi.com'
     },
-    data: { search: 'las' },
+    data: {
+      page: 1,
+      geog: {
+        id: 27504,
+        box: [
+          -115.414628,
+          36.129554,
+          -115.062066,
+          36.380491
+        ],
+        c: [
+          -115.238347,
+          36.2550225
+        ],
+        type: 3,
+        radius: 0
+      }
+    }
   };
 
-  const fetchData = async () => {
+  const fetchData = async (searchTerm) => {
     setIsLoading(true);
     try {
-    const response = await fetch('99d7c2a71emsh6a9112fb9a5acfcp196b99jsnc68d24f561ba');
-    if (!response.ok) {
-        throw new Error('Error occurred during API request');
-      }
-      const responseData = await response.json();
-      setData(responseData);
+      const response = await axios.post(
+        options.url,
+        null,
+        {
+          headers: options.headers,
+          params: {
+            search: searchTerm
+          }
+        }
+      );
+      setData(response.data.data);
       setIsLoading(false);
     } catch (error) {
-      console.error(error);
-      setError(error.message);
+      console.error(error.response.data); // Log the error for debugging purposes
+      setError(error);
       setIsLoading(false);
     }
   };
@@ -45,7 +64,7 @@ const useFetch = (endpoint) => {
     fetchData();
   };
 
-  return { data, isLoading, error, refetch };
+  return { data, isLoading, error, refetch, fetchData };
 };
 
 export default useFetch;

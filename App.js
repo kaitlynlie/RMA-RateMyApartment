@@ -4,7 +4,7 @@ import { ImageBackground, View, ScrollView, SafeAreaView } from 'react-native';
 // import { Stack, useRouter} from 'expo-router';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import { Welcome, Apartments } from './components';
+import { Welcome, Apartments, Apartment } from './components';
 import {MapView, PROVIDER_GOOGLE } from 'react-native-maps';
 
 const Stack = createStackNavigator();
@@ -27,6 +27,11 @@ function App() {
           name="Map"
           component={Map}
         />    
+
+        <Stack.Screen
+          name="Apartment"
+          component={Apartment}
+        />  
       </Stack.Navigator>
       </NavigationContainer>
   );

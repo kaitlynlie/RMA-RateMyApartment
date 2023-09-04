@@ -24,17 +24,17 @@ const Welcome = ({searchEmail, setSearchEmail, searchPassword, setSearchPassword
     console.log('Next button pressed'); // Add this console.log statement
   };
 
-  const [email, setEmail] = useState('');
+  // const [email, setEmail] = useState('');
 
-  const handleEmailChange = (text) => {
-    setEmail(text);
-  };
+  // const handleEmailChange = (text) => {
+  //   setEmail(text);
+  // };
 
-  const [pw, setPw] = useState('');
+  // const [pw, setPw] = useState('');
 
-  const handlePwChange = (text) => {
-    setPw(text);
-  };
+  // const handlePwChange = (text) => {
+  //   setPw(text);
+  // };
 
   return (
     <View style={{    flex:1,
@@ -46,7 +46,7 @@ const Welcome = ({searchEmail, setSearchEmail, searchPassword, setSearchPassword
         <Image source = {logo} style = {styles.logo}/>
         <Text numberOfLines = {2} style={styles.welcomeMessage}>Rate My Apartment</Text>
 
-          <TextInput
+          {/* <TextInput
             placeholderTextColor="gray"
             numberOfLines={1}
             autoCapitalize="none"
@@ -61,16 +61,16 @@ const Welcome = ({searchEmail, setSearchEmail, searchPassword, setSearchPassword
               onChangeText={handlePwChange}
               placeholder="Password: "
             />
-          <View style={styles.pwunderline} />
+          <View style={styles.pwunderline} /> */}
 
          <View style={styles.button}>
           <TouchableOpacity style={styles.searchBtn} onPress={handleNext}>
           <Text style={styles.nextBtn}>Next</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style = {styles.bottomContainer} onPress={() =>{}}>
+          {/* <TouchableOpacity style = {styles.bottomContainer} onPress={() =>{}}>
           <Text style={styles.newMsg}>New? Sign up!</Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View> 
       </View> 
     </View>
