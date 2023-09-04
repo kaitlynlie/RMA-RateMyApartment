@@ -28,6 +28,13 @@ export const apartmentData = [
         longitude: -121.691140
     },
     {
+        id: '5',
+        name: 'Avalon Apartments',
+        address: '1617 Valdora St, Davis, CA 95618',
+        latitude: 38.5380433,
+        longitude: -121.7242379
+    },
+    {
         id: '6',
         name: 'Pinecrest Apartments',
         address: '920 Cranbrook Ct, Davis, CA 95616',

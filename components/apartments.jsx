@@ -16,7 +16,7 @@ export default class Apartments extends React.Component {
         longitude: -121.75403644229301,
         apartments: [],
         searchString: '',
-        distance: 1.5,
+        distance: 4,
         selectedApartment: null,
       };
     };
@@ -81,6 +81,7 @@ export default class Apartments extends React.Component {
             ref={search => this.search = search}
             onChangeText={(text) => {this.setState({searchString: text})}}
             value={this.state.searchString}
+            autoCapitalize="none"
           />
         </View>
 
@@ -89,6 +90,7 @@ export default class Apartments extends React.Component {
             Distance: {this.state.distance.toString() } mi
           </Text>
           <Slider
+     
             value={this.state.distance}
             maximumValue={4}
             minimumValue={0}
@@ -98,7 +100,7 @@ export default class Apartments extends React.Component {
             }}
             step={0.2}
             allowTouchTrack
-            thumbStyle={{ height: 10, width: 10, backgroundColor: 'black' }}
+            thumbStyle={{ height: 20, width: 20, backgroundColor: '#FFD210' }}
           />
         </View>
 
