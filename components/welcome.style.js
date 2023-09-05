@@ -86,19 +86,22 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFD210",
     borderRadius: 16,
     marginTop: 40,
+    justifyContent: "center",
+    alignItems: "center",
+    height: 30, // Adjust the height as desired
   },
+  
   nextBtn: {
-    fontWeight:'bold', 
-    alignSelf: 'center', 
-    textAlign: 'center', 
-    fontSize: 18, 
-    backgroundColor: "#FFD210", 
-    borderWidth: 2,
-    borderColor: "#312651", 
-    width:100, 
-    height:28, 
-    borderRadius: 15, 
+    fontWeight: 'bold',
+    alignSelf: 'center',
+    textAlign: 'center',
+    fontSize: 18,
+    backgroundColor: "#FFD210",
+    width: 100,
+    height: '100%',
+    borderRadius: 15,
     overflow: 'hidden',
+    lineHeight: 30, // Set lineHeight equal to the button height
   },
   bottomContainer: {
     bottom: -20,
