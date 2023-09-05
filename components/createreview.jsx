@@ -63,7 +63,7 @@ const CreateReview = () => {
           }
     
           // Handle successful response
-          navigation.navigate('Apartment');
+          navigation.navigate('Apartments');
         } catch (error) {
           console.error(error);
           alert(error.message);

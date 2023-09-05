@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
         height: 60
       },
   searchBtn: {
-    marginTop: 20,
+    marginTop: 10,
     flex: 1,
     backgroundColor: "#FFD210",
     height: "100%",
@@ -26,6 +26,15 @@ const styles = StyleSheet.create({
   nextBtn: {
     fontSize: 16,
     fontWeight: 'bold',
+  },
+  reviewBox: {
+    marginTop: 20,
+    marginHorizontal: 10,
+    backgroundColor: '#d3d3d3',
+    borderRadius: 16,
+    padding: 10,
+    width: 400,
+    marginBottom: 10,
   },
 });
 
