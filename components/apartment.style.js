@@ -12,9 +12,10 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "row",
-        height: 80
+        height: 60
       },
   searchBtn: {
+    marginTop: 20,
     flex: 1,
     backgroundColor: "#FFD210",
     height: "100%",

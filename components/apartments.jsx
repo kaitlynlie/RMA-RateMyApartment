@@ -6,6 +6,7 @@ import { Slider } from 'react-native-elements';
 import Geolocation from '@react-native-community/geolocation';
 import {apartmentData} from '../constants/data'
 import { logo } from '../assets/images'
+import PropTypes from 'deprecated-react-native-prop-types'
 
 export default class Apartments extends React.Component {
 
@@ -149,7 +150,9 @@ export default class Apartments extends React.Component {
         <View style={{ flex: 1, justifyContent: 'space-between', alignItems: 'center'}}>
           <Text style={{fontWeight: 'bold', textAlign: 'center'}}>{iapartment.name}</Text>
           <Image style={{ width: 80, height: 80 }} source= {logo} />
-          <Text style={{ fontStyle: 'italic', textAlign: 'center' }}>Check out the reviews...</Text>
+          <TouchableOpacity style={styles.searchBtn} onPress={() => {handleSubmitReview}}>
+              <Text style={styles.reviewBtn}>Reviews</Text>
+            </TouchableOpacity>
         </View>
       </Callout>
     </Marker>

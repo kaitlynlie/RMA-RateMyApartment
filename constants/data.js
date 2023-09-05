@@ -1,4 +1,4 @@
-export const apartmentData = [
+const apartmentData = [
     {
         id: '1',
         name: 'Brisa Villas',
@@ -448,3 +448,7 @@ export const apartmentData = [
         longitude: -121.7862762
     },
 ]
+
+module.exports = {
+    apartmentData
+  };

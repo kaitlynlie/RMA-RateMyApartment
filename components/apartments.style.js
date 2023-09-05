@@ -20,21 +20,36 @@ const styles = StyleSheet.create({
   searchBtn: {
     backgroundColor: "#FFD210",
     borderRadius: 16,
-
+    alignItems: 'center',
+    justifyContent: 'center',
+    // Add the following properties to center the text
+    textAlign: 'center',
+    alignSelf: 'center',
   },
   nextBtn: {
-    fontWeight:'bold', 
-    alignSelf: 'center', 
-    textAlign: 'center', 
-    fontSize: 18, 
-    backgroundColor: "#FFD210", 
-    borderWidth: 2,
-    borderColor: "#312651", 
-    width:150, 
-    height:28, 
-    borderRadius: 15, 
+    fontWeight: 'bold',
+    fontSize: 18,
+    backgroundColor: "#FFD210",
+    width: 150,
+    height: 28,
+    borderRadius: 15,
     overflow: 'hidden',
+    // Add the following properties to center the text
+    textAlign: 'center',
+    lineHeight: 28, // Set the same value as the button's height
   },
+  reviewBtn: {
+    fontWeight: 'bold',
+    fontSize: 18,
+    backgroundColor: "#FFD210",
+    width: 100,
+    height: 28,
+    borderRadius: 15,
+    overflow: 'hidden',
+    // Add the following properties to center the text
+    textAlign: 'center',
+    lineHeight: 28, // Set the same value as the button's height
+  }
 });
 
 export default styles;
