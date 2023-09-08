@@ -1,11 +1,8 @@
 import React, { useState } from 'react'
 import { View, Text, TextInput, TouchableOpacity } from 'react-native'
-import { Slider } from 'react-native-elements';
-import { AirbnbRating } from 'react-native-ratings';
 import StarRating from 'react-native-star-rating';
 import styles from './createreview.style';
 import { useNavigation } from '@react-navigation/native';
-import { apartmentData } from '../constants/data';
 import { useRoute } from '@react-navigation/native';
 
 const CreateReview = () => {

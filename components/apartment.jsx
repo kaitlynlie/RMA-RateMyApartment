@@ -20,12 +20,10 @@ export default class Apartment extends React.Component {
     this.fetchApartment(apartmentId)
       .then(() => this.fetchPosts())
       .then(() => {
-        // Set componentReady to true after fetching the apartment and posts
         this.setState({ componentReady: true });
       })
       .catch((error) => {
         console.error('Error:', error);
-        // In case of an error, also set componentReady to true to prevent indefinite loading
         this.setState({ componentReady: true });
       });
   }
@@ -49,13 +47,12 @@ export default class Apartment extends React.Component {
   fetchPosts = async () => {
   try {
     const response = await fetch('http://localhost:8080/api/v1/posts');
-    console.log('API Response:', response); // Add this line to log the response
+    // console.log('API Response:', response);
     if (response.ok) {
       const data = await response.json();
       console.log('Received data:', data);
       const posts = data?.data || [];
       this.setState({ posts }, () => {
-        // Set filteringComplete to true after updating the posts state
         this.setState({ filteringComplete: true });
       });
     } else {
@@ -87,7 +84,6 @@ export default class Apartment extends React.Component {
       });
       
       if (response.ok) {
-        // Fetch the updated posts after submitting the review
         await this.fetchPosts();
       } else {
         console.error('Failed to submit review. Status:', response.status);
@@ -125,7 +121,7 @@ export default class Apartment extends React.Component {
               starSize={20}
               fullStarColor="gold"
               emptyStarColor="gray"
-              starStyle={{ marginRight: 5 }} // Adjust this value to control the spacing between stars
+              starStyle={{ marginRight: 5 }}
             />
             </View>
           </View>

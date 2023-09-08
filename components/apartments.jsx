@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import MapView, { Callout, Marker } from 'react-native-maps';
 import { Slider } from 'react-native-elements';
-import Geolocation from '@react-native-community/geolocation';
 import {apartmentData} from '../constants/data'
 import { logo } from '../assets/images'
 import PropTypes from 'deprecated-react-native-prop-types'
@@ -32,19 +31,19 @@ export default class Apartments extends React.Component {
  searchSection = () => {
 
   function getDistanceInMiles(lat1, lon1, lat2, lon2) {
-    const earthRadiusInMiles = 3958.8; // Radius of the Earth in miles
+    const earthRadiusInMiles = 3958.8; 
   
-    // Convert latitude and longitude to radians
+    // lat and long in radians
     const lat1Rad = degToRad(lat1);
     const lon1Rad = degToRad(lon1);
     const lat2Rad = degToRad(lat2);
     const lon2Rad = degToRad(lon2);
   
-    // Calculate the differences between coordinates
+    // diff between coordinates
     const latDiff = lat2Rad - lat1Rad;
     const lonDiff = lon2Rad - lon1Rad;
   
-    // Calculate the distance using the Haversine formula
+    // calculated distance
     const a =
       Math.sin(latDiff / 2) * Math.sin(latDiff / 2) +
       Math.cos(lat1Rad) * Math.cos(lat2Rad) * Math.sin(lonDiff / 2) * Math.sin(lonDiff / 2);
@@ -54,7 +53,7 @@ export default class Apartments extends React.Component {
     return distance;
   }
   
-  // Helper function to convert degrees to radians
+  // converts deg into rad
   function degToRad(degrees) {
     return degrees * (Math.PI / 180);
   }
@@ -143,7 +142,7 @@ export default class Apartments extends React.Component {
 {this.state.apartments.map((iapartment) => {
   return (
     <Marker
-      key={iapartment.id} // Add a unique key prop for each iteration
+      key={iapartment.id}
       coordinate={{ latitude: iapartment.latitude, longitude: iapartment.longitude }}
     >
       <Callout style={{ height: 150, width: 150 }} onPress={() => { selectApartment(iapartment) }}>

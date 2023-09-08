@@ -1,13 +1,8 @@
 import React, { useState } from 'react'
-import { View, Text, TextInput, Image, FlatList, ImageBackground, StyleSheet, SafeAreaView, TouchableOpacity } from 'react-native'
+import { View, Text, Image, ImageBackground, TouchableOpacity } from 'react-native'
 import styles from './welcome.style'
 import { blob1, blob2, logo } from '../assets/images'
-// import { COLORS, images, icons, SIZES } from '../../../constants'
-import { Apartments } from '.'
 import { useNavigation } from '@react-navigation/native'
-
-// welcome page
-//TODO: buttons for next page dont work sob
 
 const Welcome = ({searchEmail, setSearchEmail, searchPassword, setSearchPassword, handleClick}) => {
   // const router = useRouter();
@@ -21,7 +16,7 @@ const Welcome = ({searchEmail, setSearchEmail, searchPassword, setSearchPassword
 
   const handleNext = () => {
     navigation.navigate("Apartments");
-    console.log('Next button pressed'); // Add this console.log statement
+    //console.log('Next button pressed');
   };
 
   // const [email, setEmail] = useState('');
@@ -71,6 +66,7 @@ const Welcome = ({searchEmail, setSearchEmail, searchPassword, setSearchPassword
           {/* <TouchableOpacity style = {styles.bottomContainer} onPress={() =>{}}>
           <Text style={styles.newMsg}>New? Sign up!</Text>
           </TouchableOpacity> */}
+
         </View> 
       </View> 
     </View>

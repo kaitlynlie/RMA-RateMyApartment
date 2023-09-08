@@ -40,11 +40,6 @@ const styles = StyleSheet.create({
     fontSize: 28,
     bottom: -12,
   },
-  // userName: {
-  //   fontFamily: FONT.regular,
-  //   fontSize: SIZES.large,
-  //   color: COLORS.secondary,
-  // },
   emailInput: {
     marginTop: 40,
     paddingBottom: 60,
@@ -88,7 +83,7 @@ const styles = StyleSheet.create({
     marginTop: 40,
     justifyContent: "center",
     alignItems: "center",
-    height: 30, // Adjust the height as desired
+    height: 30, 
   },
   
   nextBtn: {
@@ -101,7 +96,7 @@ const styles = StyleSheet.create({
     height: '100%',
     borderRadius: 15,
     overflow: 'hidden',
-    lineHeight: 30, // Set lineHeight equal to the button height
+    lineHeight: 30, 
   },
   bottomContainer: {
     bottom: -20,

@@ -22,7 +22,6 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     alignItems: 'center',
     justifyContent: 'center',
-    // Add the following properties to center the text
     textAlign: 'center',
     alignSelf: 'center',
   },
@@ -34,9 +33,8 @@ const styles = StyleSheet.create({
     height: 28,
     borderRadius: 15,
     overflow: 'hidden',
-    // Add the following properties to center the text
     textAlign: 'center',
-    lineHeight: 28, // Set the same value as the button's height
+    lineHeight: 28,
   },
   reviewBtn: {
     fontWeight: 'bold',
@@ -46,9 +44,8 @@ const styles = StyleSheet.create({
     height: 28,
     borderRadius: 15,
     overflow: 'hidden',
-    // Add the following properties to center the text
     textAlign: 'center',
-    lineHeight: 28, // Set the same value as the button's height
+    lineHeight: 28, 
   }
 });
 
